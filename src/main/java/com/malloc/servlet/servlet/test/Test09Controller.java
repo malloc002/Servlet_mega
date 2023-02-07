@@ -17,6 +17,7 @@ public class Test09Controller extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		
+		//이름과 자기소개서를 전달 받고, html 화면 구성
 		String name = request.getParameter("name");
 		String text = request.getParameter("text");
 		
