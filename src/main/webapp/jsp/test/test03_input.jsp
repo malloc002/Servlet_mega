@@ -15,12 +15,15 @@
 </head>
 <body>
 	<h1>체격 조건 입력</h1>
-	<form method="get" action="/jsp/test/test03.jsp" class="d-flex">
-		<input type="text" name="height" class="form-control col-2">
-		<div class="mt-2 mr-2">cm</div>
-		<input type="text" name="weight" class="form-control col-2">
-		<div class="mt-2 mr-2">kg</div>
-		<button type="submit" class="btn bg-info text-white">계산</button>
+	<form method="get" action="/jsp/test/test03.jsp">
+		<div class="d-flex align-items-end">
+			<input type="text" name="height" class="form-control col-2">
+			<div class="mr-2">cm</div>
+			<input type="text" name="weight" class="form-control col-2">
+			<div class="mr-2">kg</div>
+			<button type="submit" class="btn bg-info text-white">계산</button>
+		</div>
+		
 	</form>
 	
 	

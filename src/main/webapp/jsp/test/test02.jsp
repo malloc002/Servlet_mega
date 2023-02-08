@@ -16,8 +16,8 @@
 		//ans = 2 -> 날짜
 		Date now = new Date();
 	
-		SimpleDateFormat tsdf = new SimpleDateFormat("현재 시간 HH시 mm분 ss초");
-		SimpleDateFormat dsdf = new SimpleDateFormat("오늘 날짜 yyyy년 MM월 dd일");
+		SimpleDateFormat tsdf = new SimpleDateFormat("현재 시간 '<b>'HH'</b>'시 '<b>'mm'</b>'분 '<b>'ss'</b>'초");
+		SimpleDateFormat dsdf = new SimpleDateFormat("오늘 날짜 '<b>'yyyy'</b>'년 '<b>'MM'</b>'월 '<b>'dd'</b>'일");
 		
 		String ans = request.getParameter("ans");
 		
@@ -33,8 +33,8 @@
 		}
 	%>
 	
-	<h1><%= fin %></h1>
-	
+	<!--  <h1 class="font-weight-light"><%= fin %></h1>-->
+	<%= fin %>
 
 </body>
 </html>
