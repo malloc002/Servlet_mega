@@ -28,24 +28,31 @@
 	
 	<%
 		List<String> scoreList = Arrays.asList(new String[]{"X", "O", "O", "O", "X", "O", "O", "O", "X", "O"});
+	
+		int score = 0;
+		
+		for(String ans:scoreList)
+		{
+			if(ans == "O")
+				score += 10;
+		}
+	
 	%>
 	
-	<h2><%= scoreList %></h2>
-	
-	<!-- 무엇을 하는건지 모르겠습니다. -->
+	<h2>채점 결과는 <%= score %>점입니다.</h2>
 	
 	<!-- 3. 1부터 n까지의 합계를 구하는 함수 -->
 	
 	<%!
 		int sum(int n){
-			int temp = 0;
+			int result = 0;
 			
 			for(int i = 1; i <= n; i++)
 			{
-				temp += i;
+				result += i;
 			}
 			
-			return temp;
+			return result;
 		}
 	%>
 	
