@@ -4,10 +4,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>post input</title>
 </head>
 <body>
 	<form method="post" action="/jsp/ex/ex03.jsp">
+		
+		<label>닉네임</label><input type="text" name="nickname">
+		<br>
+		
+		<h3>강아지 or 고양이 or 사자</h3>
+		<label>강아지<input type="radio" name="animal" value="dog"></label>
+		<label>고양이<input type="radio" name="animal" value="cat"></label>
+		<label>사자<input type="radio" name="animal" value="lion"></label>
 		
 		<!-- select는 value 안 추가해도 그 값이 넘어감 -->
 		<!-- 근데 다른 것을 넘기고 싶으면 value 설정해주면 됨 -->
