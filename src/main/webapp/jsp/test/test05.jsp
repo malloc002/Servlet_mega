@@ -8,7 +8,12 @@
 </head>
 <body>
 	<% 
+		//cm 길이와 단위들을 전달받고,
+		//대상의 단위 결과들을 보여준다.
 		double cm = Double.parseDouble(request.getParameter("cm"));
+	
+		//단위들 unit
+		//inch, yard, feet, meter
 		String[] unitArray = request.getParameterValues("unit");
 		
 		String result="";

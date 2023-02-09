@@ -15,26 +15,30 @@
 </head>
 <body>
 	<%
+		//두 수와 연사자를 전달 받아서,
+		//해당 연산자에 맞는 계산결과를 html로 구성
 		int a = Integer.parseInt(request.getParameter("a"));
 		int b = Integer.parseInt(request.getParameter("b"));
+		
+		//+, -, X, /
 		String operator =  request.getParameter("operator");
 		
 		double result=0;
 		
 		if(operator.equals("+"))
 		{
-			result = a+b;
+			result = a + b;
 		}
 		else if(operator.equals("-"))
 		{
-			result = a-b;
+			result = a - b;
 		}
 		else if(operator.equals("X"))
 		{
-			result = a*b;
+			result = a * b;
 		}
 		else{
-			result = (double)a/(double)b;
+			result = (double)a / (double)b;
 		}
 	%>
 	
