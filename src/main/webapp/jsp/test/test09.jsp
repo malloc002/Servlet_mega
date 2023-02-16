@@ -11,8 +11,12 @@
 <body>
 	<%
 		Calendar today = Calendar.getInstance();
+		//오늘을 1일로 하기위해서 1을 미리 빼준다.
+		today.add(Calendar.DATE, -1);
 	
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 M월 d일");
+		
+		
 	%>
 	
 	<h3>오늘부터 1일</h3>
