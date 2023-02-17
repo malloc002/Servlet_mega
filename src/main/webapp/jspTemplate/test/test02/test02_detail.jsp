@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <%@ page import="java.util.*" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Melong</title>
+<meta charset="EUC-KR">
+<title>³ë·¡ ¼¼ºÎ»çÇ×</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -19,119 +19,115 @@
 <body>
 
 	<%
-	// ì•„í‹°ìŠ¤íŠ¸ ì •ë³´ 
+	// ¾ÆÆ¼½ºÆ® Á¤º¸ 
 	
 	    Map<String, Object> artistInfo = new HashMap<>();
-	    artistInfo.put("name", "ì•„ì´ìœ ");
+	    artistInfo.put("name", "¾ÆÀÌÀ¯");
 	    artistInfo.put("debute", 2008);
-	    artistInfo.put("agency", "EDAMì—”í„°í…Œì¸ë¨¼íŠ¸");
+	    artistInfo.put("agency", "EDAM¿£ÅÍÅ×ÀÎ¸ÕÆ®");
 	    artistInfo.put("photo", "http://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/867/444/81867444_1616662460652_1_600x600.JPG");
 	
 	
-	// ì•„ì´ìœ  ë…¸ë˜ ë¦¬ìŠ¤íŠ¸ 
+	// ¾ÆÀÌÀ¯ ³ë·¡ ¸®½ºÆ® 
 	    List<Map<String, Object>> musicList = new ArrayList<>();
 	
 	    Map<String, Object> musicInfo = new HashMap<>();
 	    musicInfo.put("id", 1);
-	    musicInfo.put("title", "íŒ”ë ˆíŠ¸");
+	    musicInfo.put("title", "ÆÈ·¹Æ®");
 	    musicInfo.put("album", "Palette");
-	    musicInfo.put("singer", "ì•„ì´ìœ ");
+	    musicInfo.put("singer", "¾ÆÀÌÀ¯");
 	    musicInfo.put("thumbnail", "https://upload.wikimedia.org/wikipedia/ko/b/b6/IU_Palette_final.jpg");
 	    musicInfo.put("time", 217);
-	    musicInfo.put("composer", "ì•„ì´ìœ ");
-	    musicInfo.put("lyricist", "ì•„ì´ìœ ");
+	    musicInfo.put("composer", "¾ÆÀÌÀ¯");
+	    musicInfo.put("lyricist", "¾ÆÀÌÀ¯");
 	    musicList.add(musicInfo);
 	
 	    musicInfo = new HashMap<>();
 	    musicInfo.put("id", 2);
-	    musicInfo.put("title", "ì¢‹ì€ë‚ ");
+	    musicInfo.put("title", "ÁÁÀº³¯");
 	    musicInfo.put("album", "Real");
-	    musicInfo.put("singer", "ì•„ì´ìœ ");
+	    musicInfo.put("singer", "¾ÆÀÌÀ¯");
 	    musicInfo.put("thumbnail", "https://upload.wikimedia.org/wikipedia/ko/3/3c/IU_-_Real.jpg");
 	    musicInfo.put("time", 233);
-	    musicInfo.put("composer", "ì´ë¯¼ìˆ˜");
-	    musicInfo.put("lyricist", "ê¹€ì´ë‚˜");
+	    musicInfo.put("composer", "ÀÌ¹Î¼ö");
+	    musicInfo.put("lyricist", "±èÀÌ³ª");
 	    musicList.add(musicInfo);
 	
 	    musicInfo = new HashMap<>();
 	    musicInfo.put("id", 3);
-	    musicInfo.put("title", "ë°¤í¸ì§€");
+	    musicInfo.put("title", "¹ãÆíÁö");
 	    musicInfo.put("album", "palette");
-	    musicInfo.put("singer", "ì•„ì´ìœ ");
+	    musicInfo.put("singer", "¾ÆÀÌÀ¯");
 	    musicInfo.put("thumbnail", "https://upload.wikimedia.org/wikipedia/ko/b/b6/IU_Palette_final.jpg");
 	    musicInfo.put("time", 253);
-	    musicInfo.put("composer", "ì œíœ˜,ê¹€í¬ì›");
-	    musicInfo.put("lyricist", "ì•„ì´ìœ ");
+	    musicInfo.put("composer", "Á¦ÈÖ,±èÈñ¿ø");
+	    musicInfo.put("lyricist", "¾ÆÀÌÀ¯");
 	    musicList.add(musicInfo);
 	
 	    musicInfo = new HashMap<>();
 	    musicInfo.put("id", 4);
-	    musicInfo.put("title", "ì‚ì‚");
-	    musicInfo.put("album", "ì‚ì‚");
-	    musicInfo.put("singer", "ì•„ì´ìœ ");
+	    musicInfo.put("title", "»ß»ß");
+	    musicInfo.put("album", "»ß»ß");
+	    musicInfo.put("singer", "¾ÆÀÌÀ¯");
 	    musicInfo.put("thumbnail", "https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/111/535/81111535_1539157728291_1_600x600.JPG");
 	    musicInfo.put("time", 194);
-	    musicInfo.put("composer", "ì´ì¢…í›ˆ");
-	    musicInfo.put("lyricist", "ì•„ì´ìœ ");
+	    musicInfo.put("composer", "ÀÌÁ¾ÈÆ");
+	    musicInfo.put("lyricist", "¾ÆÀÌÀ¯");
 	    musicList.add(musicInfo);
 	
 	    musicInfo = new HashMap<>();
 	    musicInfo.put("id", 5);
-	    musicInfo.put("title", "ìŠ¤ë¬¼ì…‹");
+	    musicInfo.put("title", "½º¹°¼Â");
 	    musicInfo.put("album", "CHAT-SHIRE");
-	    musicInfo.put("singer", "ì•„ì´ìœ ");
+	    musicInfo.put("singer", "¾ÆÀÌÀ¯");
 	    musicInfo.put("thumbnail", "https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/080/724/877/80724877_1445520704274_1_600x600.JPG");
 	    musicInfo.put("time", 194);
-	    musicInfo.put("composer", "ì•„ì´ìœ ,ì´ì¢…í›ˆ,ì´ì±„ê·œ");
-	    musicInfo.put("lyricist", "ì•„ì´ìœ ");
+	    musicInfo.put("composer", "¾ÆÀÌÀ¯,ÀÌÁ¾ÈÆ,ÀÌÃ¤±Ô");
+	    musicInfo.put("lyricist", "¾ÆÀÌÀ¯");
 	    musicList.add(musicInfo);
 	
 	    musicInfo = new HashMap<>();
 	    musicInfo.put("id", 6);
 	    musicInfo.put("title", "Blueming");
 	    musicInfo.put("album", "Love poem");
-	    musicInfo.put("singer", "ì•„ì´ìœ ");
+	    musicInfo.put("singer", "¾ÆÀÌÀ¯");
 	    musicInfo.put("thumbnail", "https://upload.wikimedia.org/wikipedia/ko/6/65/%EC%95%84%EC%9D%B4%EC%9C%A0_-_Love_poem.jpg");
 	    musicInfo.put("time", 217);
-	    musicInfo.put("composer", "ì•„ì´ìœ ,ì´ì¢…í›ˆ,ì´ì±„ê·œ");
-	    musicInfo.put("lyricist", "ì•„ì´ìœ ");
+	    musicInfo.put("composer", "¾ÆÀÌÀ¯,ÀÌÁ¾ÈÆ,ÀÌÃ¤±Ô");
+	    musicInfo.put("lyricist", "¾ÆÀÌÀ¯");
 	    musicList.add(musicInfo);
+	    
+	    int id = Integer.parseInt(request.getParameter("id"));
+	    
+	    Map<String, Object> song = musicList.get(id);
+	    
+	    
 	%>
 
 	<div id="wrap">
 		<jsp:include page="header.jsp" />
 		<jsp:include page="menu.jsp" />
 		<section class="contents">
-			<div class="artist border border-success mb-3 d-flex">
-				<img width="180" src="<%= artistInfo.get("photo") %>" class="m-3">
-				<div class="mt-3">
-					<h2 class="mb-3"><%= artistInfo.get("name") %></h2>
-					<div class="ml-1">
-						<div><%= artistInfo.get("agency") %></div>
-						<div><%= artistInfo.get("debute") %> ë°ë·”</div>
+			<div class="song">
+				<h2>°î Á¤º¸</h2>
+				<div class="artist border border-success mb-3 d-flex">
+					<img width="220" src="<%= song.get("thumbnail") %>" class="m-3">
+					<div class="mt-3">
+						<span class="display-4"><%= song.get("title") %></span><br>
+						<span class="text-success font-weight-bold"><%= song.get("singer") %></span>
+						<div class="mt-4">
+							<div>¾Ù¹ü <%= song.get("album") %></div>
+							<div>Àç»ı½Ã°£ <%= song.get("time") %></div>
+							<div>ÀÛ°î°¡ <%= song.get("composer") %></div>
+							<div>ÀÛ»ç°¡ <%= song.get("lyricist") %></div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="song-list">
-				<h2>ê³¡ ëª©ë¡</h2>
-				<table class="table text-center">
-					<thead>
-						<tr>
-							<th>no</th>
-							<th>ì œëª©</th>
-							<th>ì•¨ë²”</th>
-						</tr>
-					</thead>
-					<tbody>
-					<% for(Map<String, Object> song:musicList){ %>
-						<tr>
-							<td><%= song.get("id") %></td>
-							<td><a href="/jspTemplate/test/test02/test02_detail.jsp?id=<%= song.get("id") %>"><%= song.get("title") %></a></td>
-							<td><%= song.get("album") %></td>
-						</tr>
-					<% } %>
-					</tbody>
-				</table>
+			<div class="lyrics mb-5 mt-4">
+				<h2>°¡»ç</h2>
+				<hr>
+				<div>°¡»ç Á¤º¸ ¾øÀ½</div>
 			</div>
 		</section>
 		<jsp:include page="footer.jsp" />
