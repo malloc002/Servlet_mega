@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 1200px;
+	margin: auto;
+}
+
+header {
+	height: 90px;
+}
+
+.main-menu {
+	height: 40px;
+}
+
+.artist {
+	height: 200px;
+}
+
+.song-list {
+	height: 200px;
+}
+
+footer {
+	height: 100px;
+}

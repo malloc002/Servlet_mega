@@ -56,6 +56,8 @@
 	    list.add(map);
 	    map = new HashMap<String, String>() {{ put("ch", "121"); put("name", "KBSN 스포츠"); put("category", "스포츠"); } };
 	    list.add(map);
+	    
+	    String keyword = request.getParameter("keyword");
 	%>
 	
 	
@@ -72,13 +74,16 @@
 					</tr>
 				</thead>
 				<tbody>
-				<% for(Map<String, String> channel:list){ %>
+				<% for(Map<String, String> channel:list){ 
+						if(keyword == null || channel.get("category").equals(keyword)){
+				%>
 					<tr>
 						<td><%= channel.get("ch") %></td>
 						<td><%= channel.get("name") %></td>
 						<td><%= channel.get("category") %></td>
 					</tr>
-				<% } %>
+				<% }
+				} %>
 				</tbody>
 			</table>
 		</section>
