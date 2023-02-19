@@ -97,11 +97,17 @@
 	    musicInfo.put("lyricist", "아이유");
 	    musicList.add(musicInfo);
 	    
-	    int id = Integer.parseInt(request.getParameter("id"));
+	    String idString = request.getParameter("id");
+	    int id = 0;
+	    if(idString != null)
+	    {
+	    	id = Integer.parseInt(idString);	    	
+	    }
 	    
-	    Map<String, Object> song = musicList.get(id);
+	    String search = request.getParameter("search");
 	    
-	    
+	    //Map<String, Object> song = musicList.get(id-1);
+	   
 	%>
 
 	<div id="wrap">
@@ -110,18 +116,31 @@
 		<section class="contents">
 			<div class="song">
 				<h2>곡 정보</h2>
-				<div class="artist border border-success mb-3 d-flex">
-					<img width="220" src="<%= song.get("thumbnail") %>" class="m-3">
-					<div class="mt-3">
+				<div class="music-info border border-success mb-3 d-flex p-3">
+				<% for(Map<String, Object> song:musicList){ 
+					
+						//id가 전달되면, id가 일치하는 노래 보여주기
+						//제목이 전달되면, 제목이 일치하는 노래 보여주기
+					
+						if((idString != null && id == (int)song.get("id")) || (search != null && search.equals(song.get("title"))))
+						{						
+							int time = (int)song.get("time");
+						    int min = time / 60;
+						    int sec = time % 60;
+				%>
+					<img width="220" src="<%= song.get("thumbnail") %>" class="mr-3">
+					<div>
 						<span class="display-4"><%= song.get("title") %></span><br>
 						<span class="text-success font-weight-bold"><%= song.get("singer") %></span>
 						<div class="mt-4">
 							<div>앨범 <%= song.get("album") %></div>
-							<div>재생시간 <%= song.get("time") %></div>
+							<div>재생시간 <%= min %>:<%= sec %></div>
 							<div>작곡가 <%= song.get("composer") %></div>
 							<div>작사가 <%= song.get("lyricist") %></div>
 						</div>
 					</div>
+				<% 		}
+				} %>
 				</div>
 			</div>
 			<div class="lyrics mb-5 mt-4">

@@ -102,9 +102,9 @@
 		<jsp:include page="header.jsp" />
 		<jsp:include page="menu.jsp" />
 		<section class="contents">
-			<div class="artist border border-success mb-3 d-flex">
-				<img width="180" src="<%= artistInfo.get("photo") %>" class="m-3">
-				<div class="mt-3">
+			<div class="artist border border-success mb-3 d-flex p-3">
+				<img width="180" alt="아이유" src="<%= artistInfo.get("photo") %>" class="mr-3">
+				<div>
 					<h2 class="mb-3"><%= artistInfo.get("name") %></h2>
 					<div class="ml-1">
 						<div><%= artistInfo.get("agency") %></div>
