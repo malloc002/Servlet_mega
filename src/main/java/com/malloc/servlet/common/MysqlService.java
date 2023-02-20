@@ -8,6 +8,7 @@ import java.sql.Statement;
 
 public class MysqlService {
 	
+	//객체 생성이 되야 쓰일 수 있는 멤버변수는 static 안에서 쓰일 수 없기 때문에 같이 static으로 만듬
 	private static MysqlService mysqlService = null;
 
 	//접속주소, 아이디, 비밀번호
@@ -18,19 +19,25 @@ public class MysqlService {
 	private Statement statement;
 	private Connection connection;
 	
-	//객체를 관리하는 메소드
+	//객체를 관리하는 메소드 -> 객체를 생성해서 필요한 곳에 주는 역할
+	//static으로 만들어서 객체 생성 안해도 쓸 수 있는 메소드로 만들어줌
+	//static 메소드에서는 static 멤버 변수만 사용 가능하다
 	public static MysqlService getInstance() {
 		
+		//딱 한번만 만들어지게 함 -> singleton이기 때문 
 		if(mysqlService == null)
 		{
+			//클래스 안에서 객체 생성
 			mysqlService = new MysqlService();
 		}
 		
+		//이미 만들어져 있으면 그거 리턴
 		return mysqlService;
 	}
 	
+	//기본 생성자를 private으로 만들어서 직접 객체 생성 못하게 막는 것
 	private MysqlService() {
-		//강의 다시 보고 채워넣기
+		//-> 객체를 사용할 수 있는 방법은 getInstance를 통해서만 가능하게 한 것
 	}
 	
 	//접속 기능
@@ -54,12 +61,12 @@ public class MysqlService {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			
+			//에러가 나는 경우도 return을 해주어야 하기 때문에 null return
 			return null;
 		}
 	}
 	
-	//insert, update, delete
+	//insert, update, delete 쿼리 수행기능
 	public int update(String query) {
 		//실행된 행의 개수
 		try {

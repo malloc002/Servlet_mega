@@ -23,12 +23,15 @@ public class Ex01Controller extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		//used_goods에 있는 모든 행을 html로 표현
-//		MysqlService mysqlService = new MysqlService();
 		
+		//객체 생성
+//		MysqlService mysqlService = new MysqlService();
+		//직접 객체 생성하는 것이 아니라 클래스 안에서 관리되는 객체를 얻어다가 쓰는 singleton 방식
 		MysqlService mysqlService = MysqlService.getInstance();
 		
 		//접속
 		mysqlService.connect();
+		
 		
 		//쿼리 수행
 		ResultSet resultSet = mysqlService.select("SELECT * FROM `used_goods`;");
@@ -60,6 +63,11 @@ public class Ex01Controller extends HttpServlet {
 		mysqlService.disconnect();
 		
 		out.println("</body></html>");
+		
+		
+		
+		
+		
 		
 		//데이터 베이스 접속
 //		try {
