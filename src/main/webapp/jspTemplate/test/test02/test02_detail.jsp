@@ -133,13 +133,15 @@
 						<span class="display-4"><%= song.get("title") %></span><br>
 						<span class="text-success font-weight-bold"><%= song.get("singer") %></span>
 						<div class="mt-4">
-							<div>앨범 <%= song.get("album") %></div>
-							<div>재생시간 <%= min %>:<%= sec %></div>
-							<div>작곡가 <%= song.get("composer") %></div>
-							<div>작사가 <%= song.get("lyricist") %></div>
+							<div>앨범<span class="ml-5"><%= song.get("album") %></span></div>
+							<div>재생시간<span class="ml-3"><%= min %>:<%= sec %></span></div>
+							<div>작곡가<span class="ml-3"><%= song.get("composer") %></span></div>
+							<div>작사가<span class="ml-3"><%= song.get("lyricist") %></span></div>
 						</div>
 					</div>
-				<% 		}
+						
+				<% 
+					}
 				} %>
 				</div>
 			</div>
